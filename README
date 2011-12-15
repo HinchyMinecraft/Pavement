@@ -1,0 +1,3 @@
+Pavement is a plugin for Spout, an plugin for Bukkit, an API for the Minecraft game server. Smelt Gravel in a furnace to get Pavement, a new blocktype. Players walking/running on top of pavement will move twice as fast as normal and jump slightly higher.
+
+The Spout server plugin and the SpoutCraft client launcher are required to utilize this mod. Vanilla Minecraft clients will only see stone and not be sped up by the pavement.
