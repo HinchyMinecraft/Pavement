@@ -1,0 +1,7 @@
+name: Pavement
+main: us.hinchy.Pavement.Pavement
+version: a1
+description: A custom Pavement block that lets you move faster.
+author: Zach Hinchy
+website: http://dev.bukkit.org/server-mods/pavement/
+depend: [Spout]
