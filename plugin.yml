@@ -1,7 +1,12 @@
 name: Pavement
 main: us.hinchy.Pavement.Pavement
-version: a1
+version: 1.0.0
 description: A custom Pavement block that lets you move faster.
 author: Zach Hinchy
 website: http://dev.bukkit.org/server-mods/pavement/
 depend: [Spout]
+commands:
+   pavereload:
+      description: This is the command to reload the Pavement config.
+      permission: pavement.reload
+      usage: /pavereload
