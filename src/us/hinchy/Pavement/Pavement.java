@@ -32,7 +32,7 @@ import org.getspout.spoutapi.SpoutManager;
 import org.getspout.spoutapi.block.SpoutBlock;
 import org.getspout.spoutapi.block.design.Texture;
 import org.getspout.spoutapi.inventory.SpoutItemStack;
-import org.getspout.spoutapi.inventory.SpoutShapedRecipe;
+import org.getspout.spoutapi.inventory.SpoutShapedRecipe; 
 import org.getspout.spoutapi.material.CustomBlock;
 import org.getspout.spoutapi.player.SpoutPlayer;
 
@@ -60,14 +60,20 @@ public class Pavement extends JavaPlugin implements Listener {
 		
         Bukkit.getServer().addRecipe(new FurnaceRecipe(new SpoutItemStack(pavementBlock, 1), Material.GRAVEL));
         
-        SpoutShapedRecipe recipe = new SpoutShapedRecipe(new SpoutItemStack(pavementSlab, 3));
+        SpoutShapedRecipe recipe = new SpoutShapedRecipe(new SpoutItemStack(pavementSlab, 6));
         recipe.shape("PPP");
         recipe.setIngredient('P', pavementBlock);
         SpoutManager.getMaterialManager().registerSpoutRecipe(recipe);
         
+	    /*if (getServer().getPluginManager().isPluginEnabled("CustomSlabs")) {
+	        SpoutFurnaceRecipes.registerSpoutRecipe(
+	        	new SpoutFurnaceRecipe(new SpoutItemStack(CustomSlabs.GravelSlab, 1), new SpoutItemStack(pavementSlab, 1))
+	        );
+        }*/
+        
         getServer().getPluginManager().registerEvents(this, this);
 		
-		log.info("[Pavement] Version 1.0.0-dev by Zach Hinchy (http://hinchy.us/) enabled.");
+		log.info("[Pavement] Version 1.0.0 by Zach Hinchy (http://hinchy.us/) enabled.");
 	}
 	 
 	public void onDisable() { 
